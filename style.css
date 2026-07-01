@@ -1,0 +1,997 @@
+/*===============================
+  RESET
+================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",
+    Roboto,Helvetica,Arial,sans-serif;
+    background:#0d0d0d;
+    color:#ffffff;
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+/*===============================
+  VARIABLES
+================================*/
+
+:root{
+
+    --primary:#e50914;
+    --primary-dark:#b30710;
+    --secondary:#1a1a1a;
+    --card:#181818;
+    --text:#ffffff;
+    --text-light:#cfcfcf;
+    --border:#2a2a2a;
+
+    --shadow:0 8px 30px rgba(0,0,0,.35);
+
+    --radius:12px;
+
+    --transition:.3s ease;
+
+    --max-width:1200px;
+
+}
+
+/*===============================
+  GLOBAL
+================================*/
+
+.container{
+    width:90%;
+    max-width:var(--max-width);
+    margin:auto;
+}
+
+section{
+    padding:90px 0;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+ul{
+    list-style:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+
+    font-size:2.3rem;
+    color:#fff;
+    margin-bottom:15px;
+
+}
+
+.section-title p{
+
+    color:var(--text-light);
+    font-size:1.05rem;
+
+}
+
+/*===============================
+  NAVBAR
+================================*/
+
+header{
+
+    position:sticky;
+    top:0;
+    left:0;
+    z-index:999;
+
+    background:#111;
+    border-bottom:1px solid var(--border);
+
+}
+
+.navbar{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    height:75px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+.logo{
+
+    color:#fff;
+    font-size:1.8rem;
+    font-weight:700;
+
+}
+
+.logo span{
+
+    color:var(--primary);
+
+}
+
+.nav-links{
+
+    display:flex;
+    gap:30px;
+
+}
+
+.nav-links a{
+
+    color:#fff;
+    font-weight:500;
+    transition:var(--transition);
+
+}
+
+.nav-links a:hover{
+
+    color:var(--primary);
+
+}
+
+.menu-btn{
+
+    display:none;
+
+    font-size:1.8rem;
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+/*===============================
+ HERO
+================================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.75),
+    rgba(0,0,0,.75)),
+
+    
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+    inset:0;
+
+}
+
+.hero-content{
+
+    position:relative;
+    z-index:10;
+
+    max-width:750px;
+
+    padding:20px;
+
+}
+
+.hero-content h1{
+
+    font-size:3.7rem;
+    margin-bottom:20px;
+
+    font-weight:800;
+
+}
+
+.hero-content h2{
+
+    color:var(--primary);
+
+    font-size:2.2rem;
+
+    margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+    color:#dddddd;
+
+    font-size:1.2rem;
+
+    margin-bottom:35px;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:14px 38px;
+
+    border-radius:40px;
+
+    transition:var(--transition);
+
+    font-weight:600;
+
+}
+
+.btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+}
+
+/*===============================
+ ABOUT
+================================*/
+
+.about{
+
+    background:#101010;
+
+}
+
+.about-content{
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+.about-text h3{
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+.about-text p{
+
+    color:var(--text-light);
+
+    margin-bottom:20px;
+
+}
+
+.about-card{
+
+    display:grid;
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:var(--card);
+
+    padding:35px;
+
+    border-radius:var(--radius);
+
+    border:1px solid var(--border);
+
+    text-align:center;
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--primary);
+
+}
+
+.card i{
+
+    font-size:2.5rem;
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+}
+
+.card h4{
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    color:var(--text-light);
+
+}
+/*====================================
+    SERVICES SECTION
+====================================*/
+
+.services{
+    background:#0d0d0d;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.service-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:35px 30px;
+
+    text-align:center;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+}
+
+.service-card i{
+
+    font-size:3rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.service-card h3{
+
+    font-size:1.4rem;
+
+    margin-bottom:15px;
+
+    color:#fff;
+
+}
+
+.service-card p{
+
+    color:var(--text-light);
+
+    font-size:0.98rem;
+
+    line-height:1.8;
+
+}
+
+/*====================================
+    COMMON BUTTON HOVER
+====================================*/
+
+button,
+.btn,
+.price-btn{
+
+    transition:var(--transition);
+
+}
+
+button:hover,
+.btn:hover,
+.price-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/*====================================
+    INPUTS (Common Styling)
+====================================*/
+
+input,
+textarea,
+button{
+
+    font-family:inherit;
+
+}
+
+input:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 10px rgba(229,9,20,.25);
+
+}
+
+/*====================================
+    CUSTOM SCROLLBAR
+====================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/*====================================
+    TEXT SELECTION
+====================================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/*====================================
+    RESPONSIVE
+    (About + Services)
+====================================*/
+
+/* Tablets */
+
+@media (max-width:992px){
+
+    .about-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .services-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .services-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .section-title h2{
+
+        font-size:2rem;
+
+    }
+
+    .about-text h3{
+
+        font-size:1.7rem;
+
+    }
+
+    .card{
+
+        padding:30px;
+
+    }
+
+    .service-card{
+
+        padding:30px 25px;
+
+    }
+
+}
+
+/* Small Phones */
+
+@media (max-width:480px){
+
+    .section-title{
+
+        margin-bottom:40px;
+
+    }
+
+    .section-title h2{
+
+        font-size:1.8rem;
+
+    }
+
+    .section-title p{
+
+        font-size:.95rem;
+
+    }
+
+    .about-text h3{
+
+        font-size:1.5rem;
+
+    }
+
+    .about-text p{
+
+        font-size:.95rem;
+
+    }
+
+    .service-card{
+
+        padding:25px 20px;
+
+    }
+
+    .service-card i{
+
+        font-size:2.5rem;
+
+    }
+
+    .service-card h3{
+
+        font-size:1.2rem;
+
+    }
+
+    .service-card p{
+
+        font-size:.92rem;
+
+    }
+
+}
+/*====================================
+    PRICING SECTION
+====================================*/
+
+.pricing{
+    background:#101010;
+}
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.price-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:40px 30px;
+    text-align:center;
+    position:relative;
+    transition:var(--transition);
+    box-shadow:var(--shadow);
+}
+
+.price-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+}
+
+.price-card h3{
+    font-size:1.6rem;
+    margin-bottom:15px;
+}
+
+.price-card h1{
+    color:var(--primary);
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.price-card span{
+    color:var(--text-light);
+    display:block;
+    margin-bottom:25px;
+}
+
+.price-card ul{
+    margin-bottom:30px;
+}
+
+.price-card ul li{
+    padding:10px 0;
+    color:var(--text-light);
+    border-bottom:1px solid #2b2b2b;
+}
+
+.price-card ul li:last-child{
+    border-bottom:none;
+}
+
+.price-btn{
+    display:inline-block;
+    background:var(--primary);
+    color:#fff;
+    padding:12px 30px;
+    border-radius:40px;
+    font-weight:600;
+}
+
+.price-btn:hover{
+    background:var(--primary-dark);
+}
+
+.featured{
+    border:2px solid var(--primary);
+    transform:scale(1.04);
+}
+
+.featured:hover{
+    transform:scale(1.06);
+}
+
+.badge{
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:var(--primary);
+    color:#fff;
+    padding:6px 15px;
+    border-radius:20px;
+    font-size:.85rem;
+    font-weight:600;
+}
+
+/*====================================
+    CONTACT SECTION
+====================================*/
+
+.contact{
+    background:#0d0d0d;
+}
+
+.contact-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.info-box{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:var(--card);
+    padding:25px;
+    border-radius:var(--radius);
+    border:1px solid var(--border);
+    transition:var(--transition);
+}
+
+.info-box:hover{
+    border-color:var(--primary);
+}
+
+.info-box i{
+    font-size:2rem;
+    color:var(--primary);
+}
+
+.info-box h4{
+    margin-bottom:5px;
+}
+
+.info-box p{
+    color:var(--text-light);
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    background:#181818;
+    border:1px solid var(--border);
+    border-radius:8px;
+    color:#fff;
+    font-size:1rem;
+}
+
+.contact-form textarea{
+    resize:vertical;
+}
+
+.contact-form button{
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    padding:15px;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:600;
+}
+
+.contact-form button:hover{
+    background:var(--primary-dark);
+}
+
+/*====================================
+    FOOTER
+====================================*/
+
+footer{
+    background:#080808;
+    text-align:center;
+    padding:25px 10px;
+    border-top:1px solid var(--border);
+}
+
+footer p{
+    color:#bdbdbd;
+    font-size:.95rem;
+}
+
+/*====================================
+    RESPONSIVE NAVIGATION
+====================================*/
+
+@media(max-width:768px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:75px;
+        left:-100%;
+        width:100%;
+        background:#111;
+        flex-direction:column;
+        align-items:center;
+        gap:0;
+        transition:.4s;
+    }
+
+    .nav-links.active{
+        left:0;
+    }
+
+    .nav-links li{
+        width:100%;
+        text-align:center;
+    }
+
+    .nav-links li a{
+        display:block;
+        padding:18px;
+        border-bottom:1px solid #222;
+    }
+
+}
+
+/*====================================
+    RESPONSIVE TABLETS
+====================================*/
+
+@media(max-width:992px){
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .hero-content h2{
+        font-size:2rem;
+    }
+
+    .pricing-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact-wrapper{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/*====================================
+    MOBILE
+====================================*/
+
+@media(max-width:768px){
+
+    section{
+        padding:70px 0;
+    }
+
+    .hero-content h1{
+        font-size:2.5rem;
+    }
+
+    .hero-content h2{
+        font-size:1.8rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+
+    .pricing-grid{
+        grid-template-columns:1fr;
+    }
+
+    .featured{
+        transform:none;
+    }
+
+    .featured:hover{
+        transform:translateY(-8px);
+    }
+
+}
+
+/*====================================
+    SMALL PHONES
+====================================*/
+
+@media(max-width:480px){
+
+    .navbar{
+        height:70px;
+    }
+
+    .logo{
+        font-size:1.5rem;
+    }
+
+    .hero-content h1{
+        font-size:2rem;
+    }
+
+    .hero-content h2{
+        font-size:1.4rem;
+    }
+
+    .btn{
+        padding:12px 28px;
+    }
+
+    .price-card{
+        padding:30px 20px;
+    }
+
+    .price-card h1{
+        font-size:2.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+        padding:13px;
+    }
+
+}
+
+/*====================================
+    LARGE SCREENS
+====================================*/
+
+@media(min-width:1400px){
+
+    .container{
+        max-width:1350px;
+    }
+
+    .hero-content h1{
+        font-size:4.5rem;
+    }
+
+    .hero-content h2{
+        font-size:2.8rem;
+    }
+
+    .hero-content p{
+        font-size:1.3rem;
+    }
+
+}
+
+/*====================================
+    END
+====================================*/
